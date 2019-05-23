@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "nodemon --inspect=0.0.0.0 app.js"
   },
   "author": "",
   "license": "ISC",
@@ -25,6 +25,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
+    "http": "0.0.0",
     "https": "^1.0.0",
     "imdb": "^1.1.0",
     "imdb-api": "^4.0.2",
@@ -37,6 +38,7 @@
     "movie-trailer": "^2.0.3",
     "node-fetch": "^2.3.0",
     "nodemailer": "^5.1.1",
+    "nodemon": "^1.19.0",
     "omdb": "^0.8.0",
     "opn": "^6.0.0",
     "passport": "^0.4.0",

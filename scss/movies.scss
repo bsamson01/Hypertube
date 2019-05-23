@@ -1,0 +1,22 @@
+.seasons {
+    height: 300px;
+
+    .row__inner {
+        max-height: 290px;
+        width: fit-content;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+
+        .tile {
+            display: inline-block;
+
+            .tile__img {
+                vertical-align: middle;
+                border-style: none;
+                width: 150px;
+                height: 200px;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+section(class="single-info overlay_container")
+    article(class="movie_cover" style="background: url("+image_url+show.backdrop_path+")")
+    article(class="movie_info")
+        article
+            h2 #{show.name}
+            img(src=image_url+show.poster_path, alt="Movie" width="400px" height="400px")
+            button(type="button" id="playTrailer" class="playTrailer")
+                i(class="fas fa-play")
+                span Watch Trailer
+        article
+            p #{show.overview}
+
+    div(class="modal" id="myModal")
+        div(class="modal-content")
+            div(class="modal-header")
+                button(class="close") &times;
+            div(class="modal-body")
+                iframe(src=trailer, class="trailer" frameborder="2" allowscriptaccess="always" width="500" height="300" allow="autoplay")
+if seasons
+    section(class="seasons")
+        div(class="row__inner")
+            each season, i in seasons
+                div(class="tile")
+                        div(class="tile__media")
+                            img(class="tile__img" src=image_url+season.poster_path alt="seasons")
+                        div(class="tile__details")
+                            div(class="tile__title") #{season.name}
+
+section(class="single more")
+    h1 Similar Shows
+    if similarShows
+        each show, i in similarShows
+            a(class="blocks" href="/movies/series/display?id="+ show.id)
+                figure
+                    img(src= image_url+show.poster_path, alt="Movie")
+                    figcaption #{show.name}

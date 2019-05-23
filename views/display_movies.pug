@@ -10,3 +10,11 @@ block content
                         figcaption #{movie.title}
         else if movie
             include ./movies-single.pug
+        else if series
+            each show, i in series
+                a(class="blocks" href="/movies/series/display?id="+ show.id)
+                    figure
+                        img(src= image_url+show.poster_path, alt="Series")
+                        figcaption #{show.title}
+        else if show
+            include ./show-single.pug
