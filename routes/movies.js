@@ -28,7 +28,7 @@ router.get('/display', function(req, res, next) {
     var trailer;
 
     hypertube.getMovie({id: id}, function(movie) {
-        hypertube.getTvTrailer({id: id}, function (response) {
+        hypertube.getMovieTrailer({id: id}, function (response) {
             var link = "";
             var results = response.results;
 

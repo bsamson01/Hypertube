@@ -1,13 +1,13 @@
 section(class="single-info overlay_container")
     article(class="movie_cover" style="background: url("+image_url+movie.backdrop_path+")")
     article(class="movie_info")
-        article
+        article(class="movie-poster")
             h2 #{movie.title}
-            img(src=image_url+movie.poster_path, alt="Movie" width="400px" height="400px")
+            img(src=image_url+movie.poster_path class="poster" alt="Movie")
             button(type="button" id="playTrailer" class="playTrailer")
                 i(class="fas fa-play")
                 span Watch Trailer
-        article
+        article(class="movie-details")
             p #{movie.overview}
 
     div(class="modal" id="myModal")

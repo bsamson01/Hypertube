@@ -5,3 +5,9 @@ $('#playTrailer').on('click', function() {
 $('.close').first().on('click',  function() {
     $('#myModal').css('display', 'none');
 });
+
+$("article.movie-poster").hover(function() {
+  $(this).siblings("article.movie-details").css('display', 'block');
+}, function() {
+  $(this).siblings("article.movie-details").css('display', 'none');
+});
