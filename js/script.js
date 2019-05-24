@@ -11,3 +11,9 @@ $("article.movie-poster").hover(function() {
 }, function() {
   $(this).siblings("article.movie-details").css('display', 'none');
 });
+
+$("article.movie-details").hover(function() {
+  $(this).css('display', 'block');
+}, function() {
+  $(this).css('display', 'none');
+});
