@@ -9,10 +9,9 @@ html(lang="en")
         link(rel="icon" href="/icon.png")
         title #{title}
     body
-
+        include ./nav-bar.pug
         div(class="body-container")
             block content
-
         footer
             p Copyright &copy; 2019
     script(type="text/javascript" src="/js/jquery.js")

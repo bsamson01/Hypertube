@@ -1,15 +1,14 @@
-nav
-    a(href="/home") Hypertube
-    if user
+nav(class="grid-x")
+    ul(class="menu align-left small-6")
         a(href="/home")
-            button Home
-        a(href="/user/logout")
-            button Logout
-    else
-        a(href="/user/loginForm")
-            button Login
-        a(href="/user/signupForm")
-            button Signup
+            h1 Hypertube
+    ul(class="menu align-right small-6")
+        li
+            if user
+                a(href="/user/logout") Logout
+            else
+                a(href="/user/loginForm") Login
+                a(href="/user/signupForm") Signup
     if user
         h3(class="text-center") Search Movies
         form(name="serchForm", method="POST" action="/movies")
@@ -18,14 +17,3 @@ nav
     if errors
         each error, i in errors
             div(class="alert alert-danger") #{error.msg}
-
-
-nav
-    ul(class="menu align-right")
-        li
-            if user
-                a(href="/home") Home
-                a(class="button" href="/user/logout") Logout
-            else
-                a(href="/user/loginForm") Login
-                a(href="/user/signupForm") Signup
