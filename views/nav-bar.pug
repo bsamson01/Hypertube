@@ -1,0 +1,31 @@
+nav
+    a(href="/home") Hypertube
+    if user
+        a(href="/home")
+            button Home
+        a(href="/user/logout")
+            button Logout
+    else
+        a(href="/user/loginForm")
+            button Login
+        a(href="/user/signupForm")
+            button Signup
+    if user
+        h3(class="text-center") Search Movies
+        form(name="serchForm", method="POST" action="/movies")
+            input(type="text", name="searchText", placeholder="Search movies")
+    != messages('flashMessages', local)
+    if errors
+        each error, i in errors
+            div(class="alert alert-danger") #{error.msg}
+
+
+nav
+    ul(class="menu align-right")
+        li
+            if user
+                a(href="/home") Home
+                a(class="button" href="/user/logout") Logout
+            else
+                a(href="/user/loginForm") Login
+                a(href="/user/signupForm") Signup
