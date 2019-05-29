@@ -36,6 +36,7 @@
     "movie-art": "^2.0.3",
     "movie-info": "^2.0.4",
     "movie-trailer": "^2.0.3",
+    "ngrok": "^3.1.1",
     "node-fetch": "^2.3.0",
     "nodemailer": "^5.1.1",
     "nodemon": "^1.19.0",
