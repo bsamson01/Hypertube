@@ -27,11 +27,11 @@
 
 body {
     position: relative;
-    background-color: #28292d;
-    background: linear-gradient(45deg, #a55c1b, #8f6B29, #28292d,  #FDE08D, #DF9F28);
-    background-size: 300% 300%;
+    // background-color: #28292d !important;
+    background-image: url('https://i.pinimg.com/originals/97/b9/df/97b9dfd4c1d45fc14f54856a441907ac.jpg');
+    background-position: center center fixed;
+    background-size: 100% 100%;
     animation-timing-function: ease;
-
     animation: Gradient 20s ease infinite;
 
     @keyframes Gradient {
@@ -53,11 +53,15 @@ body {
     }
 }
 
+.alert.alert-danger {
+    position: absolute;
+    top: 10%;
+    left: 36%;
+}
+
 main {
     text-align: center;
 }
-
-
 
 .body-container {
     margin: auto;
@@ -261,6 +265,57 @@ main {
     }
 }
 
+.login-Form {
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    border-radius: 1vmin;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+
+    label {
+        color: white;
+    }
+
+    img {
+        filter: invert(50%);
+        width: 80%;
+        margin-left: 2%;
+        margin-top: 1vmin;
+    }
+}
+
+.reg-Form {
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    border-radius: 1vmin;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+
+    label {
+        color: white;
+    }
+
+    img {
+        filter: invert(50%);
+        width: 80%;
+        margin-left: 2%;
+        margin-top: 1vmin;
+    }
+}
+
+.form-control {
+    width: 80% !important;
+    margin: auto !important;
+}
+
 .modal {
     display: none; 
     position: fixed; 
@@ -328,15 +383,11 @@ main {
 }
 
 footer {
-    height: 50px;
     width: 100%;
-    margin-top: 20px;
-    background: rgba(255, 255, 255, 0.3);
     text-align: center;
     padding: 12px;
     font-weight: 600;
-    color: #28292d;
-    font-size: 16px;
+    color: white;
     position: absolute;
     bottom: 0;
 }
