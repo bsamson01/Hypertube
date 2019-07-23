@@ -69,7 +69,7 @@ app.use('/user', registration);
 mongoose.connect(config.database);
 let db = mongoose.connection;
 db.once('open', function() {
-    console.log('Connected');
+    console.log(`connected to mongodb database`);
 });
 db.on('error', function(err) {
     console.log(err);
