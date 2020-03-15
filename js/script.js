@@ -1,8 +1,12 @@
-$('#playTrailer').on('click', function() {
-  $('#myModal').css('display', 'block');
+$('.playTrailer').each(function(){
+  $(this).on('click', function() {
+    $('#trailerFrame').attr("src", $(this).data("trailer"));
+    $('#myModal').css('display', 'block');
+  });
 });
 
 $('.close').first().on('click',  function() {
+  $('#trailerFrame').attr("src", "");
     $('#myModal').css('display', 'none');
 });
 

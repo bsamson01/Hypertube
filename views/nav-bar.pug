@@ -1,13 +1,14 @@
-nav(class="grid-x")
-    ul(class="menu align-left small-6")
-        a(href="/home")
-            h1 Hypertube
-    ul(class="menu align-right small-6")
-        li
-            if user
+nav(class="container")
+    ul
+        li(class="heading")
+            a(href="/home") Hypertube
+        if user
+            li
                 a(href="/user/logout") Logout
-            else
+        else
+            li
                 a(href="/user/loginForm") Login
+            li
                 a(href="/user/signupForm") Signup
     if user
         h3(class="text-center") Search Movies

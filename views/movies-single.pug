@@ -4,18 +4,21 @@ section(class="single-info overlay_container")
         article(class="movie-poster")
             h2 #{movie.title}
             img(src=image_url+movie.poster_path class="poster" alt="Movie")
-            button(type="button" id="playTrailer" class="playTrailer")
+            button(type="button" class="playTrailer" data-trailer=trailer class="playTrailer")
                 i(class="fas fa-play")
                 span Watch Trailer
-        article(class="movie-details")
-            p #{movie.overview}
+            button(type="button" class="playTrailer" data-trailer="https://videospider.stream/personal?key=1Of1jQ02wDVBk0xR&video_id="+movie.imdb_id class="playTrailer")
+                i(class="fas fa-play")
+                span Watch Movie
+        //- article(class="movie-details")
+        //-     p #{movie.overview}
 
     div(class="modal" id="myModal")
         div(class="modal-content")
             div(class="modal-header")
                 button(class="close") &times;
             div(class="modal-body")
-                iframe(src=trailer, class="trailer" frameborder="2" allowscriptaccess="always" width="500" height="300" allow="autoplay" alloefullscreen)
+                iframe(src='#', class="trailer" id="trailerFrame" frameborder="2" allowscriptaccess="always" width="500" height="300" allow="autoplay" allowfullscreen)
 section(class="single more")
     h1 Similar Movies
     each movie, i in similarMovies
