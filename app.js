@@ -91,7 +91,6 @@ app.get('/home', function(req, res, next) {
         });
     }
     else {
-        req.flash("danger", "You need to be logged in or signup");
         res.redirect('/user/loginForm');
     }
 });
@@ -108,12 +107,11 @@ app.get('/tv-shows', function(req, res, next) {
         });
     }
     else {
-        req.flash("danger", "You need to be logged in or signup");
         res.redirect('/user/loginForm');
     }
 });
 
 var port = process.env.PORT || 3000;
 http.Server(app).listen(port, function() {
-    console.log("HTTP server listening on port 3000");
+    console.log("HTTP server listening on port " + port);
 });

@@ -3,6 +3,7 @@ extends layout
 block content
     p #{user1}
     form(action="/user/signup", method="POST")
+        h1(class="pl-30") Register
         div(class="form-group")
             label(for="firstname") Firstname
             input(type="text", name='firstname', id="firstname", class="form-control", placeholder="Enter your firstname", required)
@@ -21,7 +22,7 @@ block content
         div(class="form-group")
             label(for="confirmPassword") Confirm Password
             input(type="password", name="confirmPassword", id="confirmPassword", class="form-control", placeholder="Confirm your password", required, minlength="10")
-        input(type="submit", class="btn btn-primary", value="Sign Up")
-        input(type="reset", class="btn btn-default", value="Clear")
-    p Already have an account? 
-        a(href="/user/loginForm") Login
+        div(class="action-buttons pl-30")
+            input(type="submit", class="btn btn-primary", value="Sign Up")
+        p(class="new-or-existing pl-30") Already have an account? 
+            a(href="/user/loginForm") Login

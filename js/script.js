@@ -1,4 +1,4 @@
-$('.playTrailer').each(function(){
+$('.playVideo').each(function(){
   $(this).on('click', function() {
     $('#trailerFrame').attr("src", $(this).data("trailer"));
     $('#myModal').css('display', 'block');

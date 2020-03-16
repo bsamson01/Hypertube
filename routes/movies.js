@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const hypertube = require('./hypertube');
-const image_url = "http://image.tmdb.org/t/p/original/";
+const image_url = "https://image.tmdb.org/t/p/original/";
+const youtube_url = "https://www.youtube.com/embed/";
+const movie_url = "https://videospider.stream/personal?key=1Of1jQ02wDVBk0xR&video_id=";
 
 router.get('*', function(req, res, next){
     res.locals.user = req.user || null;
@@ -32,13 +34,13 @@ router.get('/display', function(req, res, next) {
 
             results.forEach(result => {
                 if (result.site == "YouTube" && result.type == "Trailer" && link == "")
-                        link = "https://www.youtube.com/embed/" + result.key;
+                        link = youtube_url + result.key;
             });
 
             if (link == '') {
                 results.forEach(result => {
                     if (result.site === 'YouTube' && link == "")
-                        link = "https://www.youtube.com/embed/" + result.key;
+                        link = youtube_url + result.key;
                 });
             }
 
@@ -52,6 +54,7 @@ router.get('/display', function(req, res, next) {
                     title: movie.title + ' | Hypertube',
                     trailer: trailer,
                     movie: movie,
+                    movieVideo : movie_url + movie.imdb_id,
                     similarMovies: similarMovies.results,
                     image_url: image_url
                 });
@@ -73,13 +76,13 @@ router.get('/series/display', function(req, res, next) {
 
             results.forEach(result => {
                 if (result.site == "YouTube" && result.type == "Trailer" && link == "")
-                        link = "https://www.youtube.com/embed/" + result.key;
+                        link = youtube_url + result.key;
             });
 
             if (link == '') {
                 results.forEach(result => {
                     if (result.site === 'YouTube' && link == "")
-                        link = "https://www.youtube.com/embed/" + result.key;
+                        link = youtube_url + result.key;
                 });
             }
 

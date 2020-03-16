@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
 // series
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-family: 'Acme', sans-serif;
+}
 
 .seasons {
     height: 300px;
@@ -55,17 +60,26 @@ nav {
                     color: #8f6B29;
                 }
             }
+
+            form {
+                padding: 15px;
+
+                input[type="text"] {
+                    margin-bottom: 0;
+                    border-radius: 20px;
+                }
+            }
         }
     }
 }
 
 body {
+    font-family: 'Acme', sans-serif;
     position: relative;
     background-color: #28292d;
     background: linear-gradient(45deg, #a55c1b, #8f6B29, #28292d,  #FDE08D, #DF9F28);
     background-size: 300% 300%;
     animation-timing-function: ease;
-
     animation: Gradient 20s ease infinite;
 
     @keyframes Gradient {
@@ -92,6 +106,8 @@ body {
     padding: 15px;
     padding-bottom: 90px;
     background: none;
+    min-height: 90vh;
+    text-align: center;
 
     @media screen and (min-width: 1400px) {
         max-width: 1400px;
@@ -234,7 +250,7 @@ body {
                         display: inline-block;
                     }
 
-                    .playTrailer {
+                    .playVideo {
                         width : 170px;
                         height: 40px;
                         border-radius: 20px;
@@ -297,7 +313,8 @@ body {
     background-color: rgba(0,0,0,0.4);
 
     .modal-body {
-        height: 750px;
+        height: 100%;
+        max-height: 750px;
     }
 
     .close {
@@ -325,8 +342,8 @@ body {
         animation-duration: 0.4s;
 
         .trailer {
-            width: -webkit-fill-available;
             height: 90%;
+            width: 100%;
         }
     }
 
@@ -373,6 +390,51 @@ form {
     display: block;
     margin: auto;
     padding: 20px;
+
+    .pl-30 {
+        padding-left: 30%;
+    }
+
+    .form-group {
+        display: flex;
+
+        label {
+            width: 30%;
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+        }
+
+        input {
+            border-radius: 20px;
+            width: 70%;
+        }
+    }
+
+    .action-buttons {
+        width: 100%;
+
+        .btn {
+            max-width : 50%;
+            margin: 0 10px;
+
+            &.btn-primary {
+                border-radius: 30px;
+                background: #28292d;
+                color: rgba(251,196,3, 0.5);
+                border: solid 1px #28292d;
+
+                &:hover {
+                    background: rgba(251,196,3, 0.1);
+                    color: #28292d;
+                }
+            }
+        }
+    }
+
+    .new-or-existing {
+        margin: 15px auto;
+    }
 }
 
 .btn {

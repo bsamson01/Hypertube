@@ -4,10 +4,10 @@ section(class="single-info overlay_container")
         article(class="movie-poster")
             h2 #{movie.title}
             //- img(src=image_url+movie.poster_path class="poster" alt="Movie")
-            button(type="button" class="playTrailer" data-trailer=trailer class="playTrailer")
+            button(type="button" class="playVideo" data-trailer=trailer)
                 i(class="fas fa-play")
                 span Watch Trailer
-            button(type="button" class="playTrailer" data-trailer="https://videospider.stream/personal?key=1Of1jQ02wDVBk0xR&video_id="+movie.imdb_id class="playTrailer")
+            button(type="button" class="playVideo" data-trailer=movieVideo)
                 i(class="fas fa-play")
                 span Watch Movie
         //- article(class="movie-details")
