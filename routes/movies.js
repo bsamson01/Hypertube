@@ -1,6 +1,4 @@
 const express = require('express');
-const movieTrailer = require('movie-trailer');
-const movieArt = require('movie-art');
 const router = express.Router();
 const hypertube = require('./hypertube');
 const image_url = "http://image.tmdb.org/t/p/original/";

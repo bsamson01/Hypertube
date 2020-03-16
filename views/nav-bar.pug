@@ -5,15 +5,14 @@ nav(class="container")
         if user
             li
                 a(href="/user/logout") Logout
+            li
+                form(name="serchForm", method="POST" action="/movies")
+                    input(type="text", name="searchText", placeholder="Search movies")
         else
             li
                 a(href="/user/loginForm") Login
             li
                 a(href="/user/signupForm") Signup
-    if user
-        h3(class="text-center") Search Movies
-        form(name="serchForm", method="POST" action="/movies")
-            input(type="text", name="searchText", placeholder="Search movies")
     != messages('flashMessages', local)
     if errors
         each error, i in errors
