@@ -9,7 +9,7 @@ const passport = require('passport');
 const http = require('http');
 const app = express();
 const hypertube = require('./routes/hypertube');
-const image_url = "http://image.tmdb.org/t/p/original/";
+const image_url = "https://image.tmdb.org/t/p/original/";
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
