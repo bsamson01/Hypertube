@@ -113,6 +113,7 @@ app.get('/tv-shows', function(req, res, next) {
     }
 });
 
-http.Server(app).listen(3000, function() {
+var port = process.env.port || 80;
+http.Server(app).listen(port, function() {
     console.log("HTTP server listening on port 3000");
 });
