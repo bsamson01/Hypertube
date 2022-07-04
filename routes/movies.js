@@ -3,7 +3,7 @@ const router = express.Router();
 const hypertube = require('./hypertube');
 const image_url = "https://image.tmdb.org/t/p/original/";
 const youtube_url = "https://www.youtube.com/embed/";
-const movie_url = "https://videospider.stream/personal?key=1Of1jQ02wDVBk0xR&video_id=";
+const movie_url = "https://vidsrc.me/embed/";
 
 router.get('*', function(req, res, next){
     res.locals.user = req.user || null;
