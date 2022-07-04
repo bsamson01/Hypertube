@@ -23,7 +23,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.1.1",
     "gulp-uglify": "^3.0.2",
-    "http": "0.0.0",
+    "http": "^0.0.0",
     "https": "^1.0.0",
     "mongoose": "^5.13.14",
     "mongoose-unique-validator": "^2.0.2",
@@ -42,5 +42,8 @@
   },
   "devDependencies": {
     "gulp": "^4.0.2"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
