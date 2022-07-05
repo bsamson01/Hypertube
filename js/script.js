@@ -1,13 +1,15 @@
 $('.playVideo').each(function(){
   $(this).on('click', function() {
     $('#trailerFrame').attr("src", $(this).data("trailer"));
+    $('#trailerFrame').attr("sandbox", "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation");
     $('#myModal').css('display', 'block');
   });
 });
 
 $('.close').first().on('click',  function() {
   $('#trailerFrame').attr("src", "");
-    $('#myModal').css('display', 'none');
+  $('#trailerFrame').attr("sandbox", "");
+  $('#myModal').css('display', 'none');
 });
 
 $("article.movie-poster").hover(function() {

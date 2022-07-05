@@ -18,7 +18,7 @@ section(class="single-info overlay_container")
             div(class="modal-header")
                 button(class="close") &times;
             div(class="modal-body")
-                iframe(src='#', class="trailer" id="trailerFrame" frameborder="2" allowscriptaccess="always" width="500" height="300" allow="autoplay" allowfullscreen)
+                iframe(src='#', sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" class="trailer" id="trailerFrame" frameborder="2" allowscriptaccess="always" width="500" height="300" allow="autoplay" allowfullscreen)
 section(class="single more")
     h1 Similar Movies
     each movie, i in similarMovies
