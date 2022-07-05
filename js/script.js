@@ -2,6 +2,7 @@ $('.playVideo').each(function(){
   $(this).on('click', function() {
     $('#trailerFrame').attr("src", $(this).data("trailer"));
     $('#trailerFrame').attr("sandbox", "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation");
+    frames['trailerFrame'].location.ref = $(this).data("trailer");
     $('#myModal').css('display', 'block');
   });
 });
